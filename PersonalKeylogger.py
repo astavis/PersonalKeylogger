@@ -1,5 +1,5 @@
 import pynput
-
+import time
 from pynput.keyboard import Key,Listener
 
 time.sleep(0.5)

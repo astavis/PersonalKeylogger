@@ -2,6 +2,11 @@ import pynput
 import time
 from pynput.keyboard import Key,Listener
 
+count = 0
+keys = []
+
+
+print(" _           _ ")
 time.sleep(0.5)
 print("| |_ ___ _ _| |___ ___ ___ ___ ___ ")
 time.sleep(0.5)

